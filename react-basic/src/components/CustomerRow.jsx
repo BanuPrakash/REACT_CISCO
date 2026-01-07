@@ -3,10 +3,12 @@ import React, { Component } from 'react'
 export default class CustomerRow extends Component {
   
   render() {
+    // destucturing, extract to local variables
+    let {id, firstName, lastName} = this.props.customer;
     return (
       <div>
-        {this.props.customer.firstName} &nbsp; {this.props.customer.lastName} &nbsp; 
-        <button type='button'>Delete</button>
+        {firstName} &nbsp; {lastName} &nbsp; 
+        <button type='button' onClick={() => this.props.delEvent(id)}>Delete</button>
       </div>
     )
   }

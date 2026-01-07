@@ -442,3 +442,25 @@ Class component can have
 3) behaviour
 
 map() to transform 
+
+props --> mechanism using which data is passed from parent to child [ think attributes of HTML tags]
+
+Warning: Each child in a list should have a unique "key" prop. --> Reason -> Better reconcilliation
+
+React reconciliation is the process by which React efficiently updates the actual DOM to match the latest changes in component state or props.
+
+```
+    <ul>
+        <li key="a">One</li>
+        <li key="b">Two</li>
+    <ul>
+```
+
+function add(x,y) {
+
+}
+
+let a = 10;
+let b = 33;
+
+add(a,b);
