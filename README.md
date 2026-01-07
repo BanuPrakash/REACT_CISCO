@@ -176,6 +176,9 @@ Module System: Better modularity to code [ private and public]
     module.exports = {
         addProduct
     }
+
+    other.js
+    const {addProduct} = require('./product');
 ==
 Other JS files which import product.js can only use addProduct
 ```
@@ -205,3 +208,94 @@ When code is built for production it includes only dependecies and not developer
 Team members: clone/pull the project
 webpack_example % npm i
 
+webpack_example % npm i webpack webpack-cli babel-loader @babel/core @babel/preset-env -D
+
+NodeJs understands CommonJS module system.
+We will use ESM [ECMAScript 6 - JS 6 module system]
+Example of ESM:
+```
+lib.js
+export function add(x,y) {
+
+}
+
+export function subtract(x,y) {
+
+}
+// private
+function multiply(x,y) {
+
+}
+
+other.js
+import {add, subtract} from './lib'
+``
+import {add, subtract} from './lib'
+babel-loader: understands ESM and helps import files [ here loads lib.js into memory]
+loaded file is given to transcompiler @babel/core
+@babel/core: uses @babel/preset-env
+@babel/preset-env: @babel/preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s).
+
+```
+Syntax Transform:
+let add = (x,y) => x + y;
+let data = [4,5,7];
+let [x,y] = data;
+
+gets converted to
+
+function add(x,y) {
+    return x + y;
+}
+
+var data = [4,5,7];
+var x = data[0];
+var y = data[1];
+```
+
+browser polyfills
+```
+    My Code: Promise.resolve(() => "Hello World");
+    Older Browsers don't understand Promise
+
+    Alternate:
+    import 'core-js/actual/promise';
+    Promise.resolve(() => "Hello World");
+```
+npm i css-loader style-loader
+
+css-loader: allows you to import css files in JS, just like importing js
+
+index.js
+import 'styles.css'
+
+style-loader places the loaded css within style tag
+```
+<style>
+    body {}
+    .card{}
+</style>
+```
+Configuration files has to be in "CommonJS" module system
+
+```
+npm run dev
+
+asset bundle.js 5.61 KiB [emitted] (name: main)
+runtime modules 670 bytes 3 modules
+cacheable modules 709 bytes
+  ./src/index.js 298 bytes [built] [code generated]
+  ./src/Person.js 197 bytes [built] [code generated]
+  ./src/lib.js 214 bytes [built] [code generated]
+webpack 5.104.1 compiled successfully in 270 ms
+
+npm run prod
+
+> webpack_example@1.0.0 prod
+> webpack --mode production
+
+asset bundle.js 308 bytes [emitted] [minimized] (name: main)
+orphan modules 411 bytes [orphan] 2 modules
+./src/index.js + 2 modules 709 bytes [built] [code generated]
+webpack 5.104.1 compiled successfully in 312 ms
+```
