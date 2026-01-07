@@ -327,3 +327,65 @@ npm i @babel/preset-react -D
 
 // react expects children also as props
 ```
+
+MVC: model view and controller
+
+React: is a View Library unlike Angular / Backbone which is based on MVC Architerctural pattern
+Angular --> Framework --> total solution
+
+React is simple and easy
+https://www.youtube.com/watch?v=8pDqJVdNa44
+History: XHP, FauxJS, ...
+
+Advantages of Using React as view library.
+Easy to convert your web application to Mobile / Tv / Desktop
+React with NextJS/ Remix allows you to write FullStack application:
+we can have  React components written for client side as well as Server side.
+
+For example if we consider Angular instead of React.
+1) Client side code is in Angular
+2) Server side code has to be done using ExpressJS or Spring Boot, ..
+
+=========
+
+React:
+1) createElement() is the core API for React -> converts JSX to JS object
+2) class component : render() returns JSX -> createElement() -> convert JSX to JS object
+3) functional components: return JSX -> createElement() -> convert JSX to JS object [99%]
+
+we can create scaffolding using webpack / vite
+
+Webpack:
+npx create-react-app my-app
+As of February 2025, the React team officially deprecated
+
+Vite:
+npm create vite@latest
+
+vite is a next generation build tool, fast updates, HMR, built-in support for TypeScript, JSX, CSS and static assets like images [ in webpack we need to configure file-loader/png-loader just like babel-loader]
+
+====
+
+npm create vite@latest
+```
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  react-basic
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  Yes
+│
+```
