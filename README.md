@@ -348,6 +348,8 @@ For example if we consider Angular instead of React.
 
 =========
 
+
+
 React:
 1) createElement() is the core API for React -> converts JSX to JS object
 2) class component : render() returns JSX -> createElement() -> convert JSX to JS object
@@ -389,3 +391,54 @@ npm create vite@latest
 │  Yes
 │
 ```
+
+Thinking in React:
+1) ATOMS: Basic building blocks, such as button, input, image
+99% of the time we use them based on libraries of your choice.
+https://primereact.org/
+https://react-bootstrap.netlify.app/
+https://react-spectrum.adobe.com/index.html
+https://mui.com/material-ui/react-button/
+KendoUI --> paid
+
+2) Molecules: Grouping atoms like Card, table --> most of the time we use ready to use from library.
+
+3) Organisms: Combining Molecules --> Navigation bar, list of Cards
+4) Templates
+5) Pages
+
+files: Components should end with "jsx" or "tsx"
+files "js" are helpers / libraries / testing 
+
+Component files should use CamelCase conventions and start with UpperCase
+
+Folder structures:
+```
+    src
+        |
+        features
+            |
+            products
+                ProductList.jsx [container]
+                ProductCard.jsx
+                ProductForm.jsx
+                ProductList.test.js
+                ProductCard.test.js
+            |
+            cart
+                CartList.jsx
+                CartRow.jsx
+                CartRow.test.js
+
+```
+
+We are building Customer application with events
+
+Class Component should inherit from Component/PureComponent and override render()
+
+Class component can have 
+1) state
+2) life-cycle methods
+3) behaviour
+
+map() to transform 
