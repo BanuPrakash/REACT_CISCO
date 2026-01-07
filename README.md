@@ -456,11 +456,51 @@ React reconciliation is the process by which React efficiently updates the actua
     <ul>
 ```
 
-function add(x,y) {
+Object: state and behaviour/actions/methods
+state has to be changed by actions/behaviour
 
-}
+props -> data passed from parent to child.
 
-let a = 10;
-let b = 33;
+Reconcilliation: whenever state or props change, execute diffing algorithim and do re-rendering of screen by updating DOM thro VDOM
 
-add(a,b);
+=======
+
+React Life-cycle methods
+Mounting: constructor() -> render() -> componentDidMount()
+Mounting: intial data -> render with initial data --> Make API calls
+Never make API calls in constructor() --> this leads to FCP issues - Core Web Vital
+componentDidMount() -> Makes API call and updates the state
+
+
+Updating Phase: whenever state / props change
+shouldComponentUpdate() -> false
+shouldComponentUpdate() -> true -> render() re-rendering with new state -> componentDidUpdate()
+
+componentDidUpdate() --> MAKE Api calls on dependend data /side effects
+
+Unmounting: called when component is getting destroyed
+componentWillUnmount() -> unsubscribe()
+
+================================================
+
+```
+npm create vite@latest
+
+◇  Project name:
+│  react-trial
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  Yes
+
+```
+
+npm install @faker-js/faker
