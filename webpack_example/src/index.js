@@ -15,3 +15,22 @@ console.log(evens);
 
 let person = new Person("Roger", 24);
 console.log(person.getName(), person.getAge());
+
+
+// used by @babel/preset-react
+let React = {
+    // should convert JSX to JS object, which can be handled by engine
+    createElement:(tag, props, ...children) => {
+     var element = {tag, props: {...props, children}};
+     console.log(element);
+     return element;
+    }
+}
+
+// JSX
+let PersonCard = <div className="card">
+    <h1 className="card-header">{person.getName()}</h1>
+    <h2 className="card-body">Age: {person.age}</h2>
+</div>
+
+console.log(PersonCard);

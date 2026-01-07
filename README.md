@@ -311,4 +311,19 @@ npm start
 
 ===========================
 
+JSX: JavaScript and XML
 
+React Demystify:
+Using JSX without React library:
+
+npm i @babel/preset-react -D
+
+```
+// props --> attributes like width, height, src in img tag
+// <img src=".." width="200px" height="150px" />
+
+// children: <h1> and <h2> are children to div
+// Age, {person.age} are children to h2
+
+// react expects children also as props
+```
