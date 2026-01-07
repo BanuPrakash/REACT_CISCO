@@ -8,7 +8,7 @@ Emails: banuprakashc@yahoo.co.in; banuprakash.cr@gmail.com
 
 https://www.linkedin.com/in/banu-prakash-50416019/
 
-https://github.com/BanuPrakash/CISCO_REACT
+https://github.com/BanuPrakash/REACT_CISCO
 
 Softwares Required:
 Visual Studio Code.
