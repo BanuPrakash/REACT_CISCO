@@ -504,3 +504,43 @@ npm create vite@latest
 ```
 
 npm install @faker-js/faker
+
+=============================
+
+Prop drilling in React is the process of passing data or state from a parent component down through multiple layers of intermediate components in the component tree to reach a deeply nested child component that actually needs the data.
+
+React 16.4+ version:
+The React Context API is a built-in feature that allows components to share data throughout the entire component tree without manually passing props at every level, a problem known as "prop drilling". 
+
+understadning children props
+```
+A and B are children
+<UserContextProvider>
+    <A />
+    <B />
+</UserContextProvider>
+
+Here E, D and F are children
+<UserContextProvider>
+    <E />
+    <D />
+    <F />
+</UserContextProvider>
+
+```
+
+```
+    let person = {
+        "name": "Tim",
+        "getName": function() {
+            return this.name
+        }
+    }
+person.getName() // works
+let ref = person.getName; // context is lost, no idea what "this" keyword is
+ref(); // not working
+
+Solution:
+let ptr = person.getName.bind(person); // bind the function definition to person
+ptr(); // works
+```

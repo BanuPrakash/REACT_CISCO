@@ -1,8 +1,15 @@
 
+import First from './context/First'
+import UserContextProvider from './context/UserContextProvider'
 import ParentComponent from './trial/ParentComponent'
 function App() {
   return (
-   <ParentComponent />
+    <div>
+      <ParentComponent />
+      <UserContextProvider>
+        <First />
+      </UserContextProvider>
+   </div>
   )
 }
 
