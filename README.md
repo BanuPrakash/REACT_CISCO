@@ -544,3 +544,6 @@ Solution:
 let ptr = person.getName.bind(person); // bind the function definition to person
 ptr(); // works
 ```
+
+<Menu />
+
