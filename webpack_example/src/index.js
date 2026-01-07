@@ -1,7 +1,11 @@
 import Person from "./Person"; // babel-loader
 import filter, {add} from "./lib";
 
+// we are importing CSS file :-)
+import './styles.css'
+
 console.log(add(4,5));
+console.log(add(41,5));
 
 let data = [5,2,7,9,11,23,78];
 

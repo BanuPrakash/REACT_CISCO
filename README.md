@@ -299,3 +299,16 @@ orphan modules 411 bytes [orphan] 2 modules
 ./src/index.js + 2 modules 709 bytes [built] [code generated]
 webpack 5.104.1 compiled successfully in 312 ms
 ```
+
+HtmlWebpackPlugin
+The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation.
+
+npm i html-webpack-plugin -D 
+
+npm i webpack-dev-server -D
+
+npm start
+
+===========================
+
+
