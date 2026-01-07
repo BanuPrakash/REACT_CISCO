@@ -151,3 +151,52 @@ pnpm i react
 
 ==================================
 
+JS Build Tools:
+1) Grunt
+Grunt is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, bundle and linting.
+2) GULP
+3) Webpack [learn] --> most preffered until FEB 2025
+4) Vite [veet] --> New projects after MAR 2025 [ everything is abstract]
+
+=======
+Module System: Better modularity to code [ private and public]
+1) CommonJS module system [default for NodeJS]
+```
+    product.js
+    var products = []; // private
+    function addProduct(product) {
+        if(validateProduct(product)) {
+            products.push(product);
+        }
+    }
+    function validateProduct(product) { // private
+        ...
+    }
+
+    module.exports = {
+        addProduct
+    }
+==
+Other JS files which import product.js can only use addProduct
+```
+2) ESM [ ECMAScript 6 Module System] --> we are going to use
+3) AMD [ Async Module Definition]
+4) SystemJS
+
+===========
+1) initialize the project
+webpack_example % npm init --y
+
+creates package.json file
+file where scripts, dependecies, devDependencies, peerDependencies are configured.
+
+webpack_example % npm i lodash
+"lodash": "4.17.21" ==> exact version
+"lodash": "^4.17.21" ==> version 4.17.21 or latest
+"lodash": "~4.17.21" => major version has to be 4, minor and patch can be latest.
+
+install the module in "node_modules" folder along with transitive depenendencies.
+
+webpack_example % npm i jest -D [ testing library]
+
+When code is built for production it includes only dependecies and not developer dependecncies
