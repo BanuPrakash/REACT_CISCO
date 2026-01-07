@@ -200,3 +200,8 @@ install the module in "node_modules" folder along with transitive depenendencies
 webpack_example % npm i jest -D [ testing library]
 
 When code is built for production it includes only dependecies and not developer dependecncies
+
+===
+Team members: clone/pull the project
+webpack_example % npm i
+
