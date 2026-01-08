@@ -1,7 +1,9 @@
+import { useContext } from 'react';
 import type Product from '../../models/Product'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContextProvider';
 
 
 // interface and type can be used to declare shape of object
@@ -13,6 +15,7 @@ type Props = {
 //   product: Product
 // }
 export default function ProductCard({product} : Props) {
+  let {addToCart} = useContext(CartContext);
   let {id, image,title, price} = product;
   return (
     <div className='col-md-4 my-2'>
@@ -25,7 +28,7 @@ export default function ProductCard({product} : Props) {
       </Card.Body>
       <Card.Footer>
         Price : {price} &nbsp;
-        <Button>Add</Button>
+        <Button onClick={() => addToCart({...product})}>Add</Button>
       </Card.Footer>
     </Card>
     </div>

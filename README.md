@@ -741,5 +741,5 @@ React Fragment to avoid div pollution:
 
 ```
 
-Resume after 1 hour Lunch Break
+CartContext: to Share Cart items to different components
 

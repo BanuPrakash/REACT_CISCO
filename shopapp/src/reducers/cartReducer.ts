@@ -8,7 +8,7 @@ type Action = {
 { type: 'CLEAR_CART'}
 
 type CartState = {
-    items: CartItem,
+    items: CartItem[],
     quantity: number,
     total: number
 }
@@ -16,7 +16,19 @@ type CartState = {
 export default function cartReducer(state: CartState, action:Action) {
     switch(action.type) {
         case 'ADD_TO_CART':
+            let item:CartItem = {
+                ...action.payload,
+                qty: 1,
+                amount: action.payload.price
+            }
+            return {
+                items: [...state.items, item],
+                total: state.total + item.amount,
+                quantity: state.quantity + 1
+            }
         case 'INCREMENT':
+            // TODO
+            return state;
         case 'CLEAR_CART':
             return {
                 items: [],
