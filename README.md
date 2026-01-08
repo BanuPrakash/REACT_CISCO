@@ -677,3 +677,7 @@ Take previous state and update
 
 useReducer() hook needs reducer function:
 reducer function takes (state, action) and returns new state
+
+Break of 20 min [ tea break] -> [11:15 IST]
+
+Build application after the break.
