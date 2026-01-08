@@ -743,3 +743,8 @@ React Fragment to avoid div pollution:
 
 CartContext: to Share Cart items to different components
 
+======
+
+JSON Server is a lightweight Node.js package that allows developers to create a full fake REST API in less than a minute using a single JSON file as the data source.
+
+shopapp % npx json-server --watch data.json --port 1234
