@@ -810,4 +810,26 @@ function mapDispatchToProps(dispatch) {
 * Convert Shopapp to RTK [ new/easier way of using Redux]
 * NextJS -> usage of React in Client and Server components also
 
+====
 
+Try Using Context in Multi-stage Form Submission
+
+```
+    {
+        "login": {
+            "email": "",
+            "password": ""
+        },
+        "personal": {
+            "firstName": "",
+            "lastName" : "",
+            "age": 0
+        },
+        "professional": {
+            "education": "",
+            "university": "",
+            "skills": ""
+        }
+    }
+
+```
