@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import NavbarComponent from "./components/NavbarComponent"
 import ProductList from "./components/product/ProductList"
 import Default from "./components/Default"
+import Address from "./components/cart/Address"
 // import axios from "axios"
 // note lazy loaded components should be only after all regular imports
 const CartList =  lazy(() => import("./components/cart/CartList"))
@@ -26,6 +27,7 @@ function App() {
               <Details />
            </Suspense>
           } />
+        <Route path="/address" element={<Address />} />
         <Route path="/" element={<ProductList />} />
         <Route path="*" element={<Default />} />
       </Routes>

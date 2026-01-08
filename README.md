@@ -663,6 +663,10 @@ Take previous state and update
 
 
 ```
+    profile: {
+        avatar: 'banu.png',
+        name: 'Banu Prakash'
+    }
     cart: {
         items: [
             {"id":4, "name": "A", qty: 2, "amount": 822},
@@ -757,4 +761,53 @@ BrowserRouter, Route, Suspense for Lazy loading, useParams, useNavigate
 4) json-server: to fake RESTful WS
 
 =======================
+
+Controlled Components vs Uncontrolled Components
+
+Controlled Components (React State)
+State Management: Data lives in the parent component's state (e.g., useState). 
+Control: Parent component dictates the value, enabling full control, validation, and formatting. 
+Use Case: Complex forms, real-time feedback, synchronization with other state
+
+let [name, setName] = useState()
+let [age, setAge] = useState()
+
+
+Uncontrolled Components (DOM/Refs)
+State Management: Data lives in the DOM; DOM manages its own state internally. 
+Control: Simpler for basic input; data isn't constantly synced with React state. 
+Use Case: Simple forms, file inputs, or when integrating with non-React libraries. 
+
+=========
+
+
+Predicatable State Managment based on Flux Architecture:
+Flux Architecture is by Facebook --> Unidirectional data flow, same as react
+
+Angular @Input @Output --> Bi-directional data flow
+React is undirectional data flow [ top to bottom] using prop-drill
+
+Many libraries are developed using this Flux Architecture:
+1) Redux
+2) Mobx
+3) Zustand
+
+Context can also be used as State management for smaller applications only
+
+```
+function mapDispatchToProps(dispatch) {
+    return {
+        add: (product) => dispatch({type:'ADD_TO_CART', payload: product}) 
+        clear: () => dispatch({type:'CLEAR_CART})
+    }
+}
+
+```
+
+===
+
+* Simple example on redux
+* Convert Shopapp to RTK [ new/easier way of using Redux]
+* NextJS -> usage of React in Client and Server components also
+
 

@@ -18,7 +18,7 @@ export default function NavbarComponent() {
             <Nav.Link as={Link} to="/cart">Cart &nbsp;
             <Badge>{quantity}</Badge>
             </Nav.Link>
-            <Nav.Link>About</Nav.Link>
+            <Nav.Link as={Link} to="/address">Address</Nav.Link>
           </Nav>
       </Navbar>
   )
