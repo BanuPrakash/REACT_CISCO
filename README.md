@@ -545,5 +545,76 @@ let ptr = person.getName.bind(person); // bind the function definition to person
 ptr(); // works
 ```
 
-<Menu />
+"test": "vitest --coverage --coverage.include=src/components/*.jsx"
+npm i @testing-library/dom @testing-library/react vitest jsdom
+
+===================
+
+Day 2
+
+Functional components are lightweight compared to class components
+Upto React 16.7 we used Class component if we had state / life-cycle methods
+else functional components
+
+From 16.8+ onwards ---> 99% of components are functional components
+
+React Hooks:
+React Hooks are special functions introduced in React 16.8 that allow you to use state and other React features, such as lifecycle methods and context, within functional components without writing a class. 
+React Hooks:
+1) useState() : to introduce state 
+2) useEffect(): to simulate life-cycle methods
+```
+    //empty depdendency means works like componentDidMount
+    
+    useEffect(() => {
+
+    },[])
+
+    // dependendency on name, called whenever name changes => works like componentDidUpdate
+    
+    useEffect(() => {
+
+    },[name])
+
+      //dependendency on name and age, called whenever name or age changes => works like  componentDidUpdate
+    useEffect(() => {
+
+    },[name, age])
+```
+3) useReducer()
+4) useContext()
+5) useMemo()
+6) useRef()
+7) useCallback()
+...
+
+
+```
+ export default class StateExampleComponent extends Component {
+    state = {
+        "name": "Sunny",
+        "age": 18
+    }
+
+    updateName(name) {
+        this.setState({
+            name
+        })
+    }
+
+    updateAge(age) {
+        this.setState({
+            age
+        })
+    }
+ }
+
+```
+CSS Framework, for Response Web Design
+npm i bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+Row contains 12 columns / grids irrespective of view port
+
+<img src="camera.png" className="col-lg-3 col-md-6 col-sm-12" />
 
