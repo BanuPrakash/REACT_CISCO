@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import type Product from "../../models/Product";
 import ProductCard from "./ProductCard";
 
+
 export default function ProductList() {
   let [products, setProducts] = useState<Product[]>([]);
 

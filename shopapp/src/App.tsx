@@ -3,13 +3,14 @@ import { Route, Routes } from "react-router-dom"
 import NavbarComponent from "./components/NavbarComponent"
 import ProductList from "./components/product/ProductList"
 import Default from "./components/Default"
-
+// import axios from "axios"
 // note lazy loaded components should be only after all regular imports
 const CartList =  lazy(() => import("./components/cart/CartList"))
 const Details = lazy(() => import("./components/product/Details"))
 
 function App() {
- 
+  // axios.defaults.headers.common['Authorization'] 
+    // = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30";
   return (
     <div className="container">
       <NavbarComponent />

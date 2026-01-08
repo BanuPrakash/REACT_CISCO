@@ -731,3 +731,12 @@ npm create vite@latest
 ```
 
 shopapp % npm i bootstrap react-bootstrap react-router-dom axios
+
+React Fragment to avoid div pollution:
+```
+ <>
+            <img src = {product.image} /> <br />
+            Name: {product.title} <br />
+ </>
+
+```

@@ -1,6 +1,7 @@
 import type Product from '../../models/Product'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 
 // interface and type can be used to declare shape of object
@@ -12,15 +13,18 @@ type Props = {
 //   product: Product
 // }
 export default function ProductCard({product} : Props) {
+  let {id, image,title, price} = product;
   return (
     <div className='col-md-4 my-2'>
     <Card style={{ width: '18rem' }} >
-      <Card.Img variant="top" src={product.image} />
+      <Link to ={`/details/${id}`}>
+          <Card.Img variant="top" src={image} />
+      </Link>
       <Card.Body>
-        <Card.Title>{product.title}</Card.Title>
+        <Card.Title>{title}</Card.Title>
       </Card.Body>
       <Card.Footer>
-        Price : {product.price} &nbsp;
+        Price : {price} &nbsp;
         <Button>Add</Button>
       </Card.Footer>
     </Card>
