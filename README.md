@@ -623,3 +623,54 @@ Row contains 12 columns / grids irrespective of view port
 
 Closure: Whenver a function returns a function, returned function can access all the members of outer function.
 
+====
+useReducer(): instead of  useState() to manage state in case of:
+1) state is complex
+2) state mutation depends on previous state
+3) conditionally mutate the state
+
+```
+    cart: {
+        items: [
+            {"id":4, "name": "A", qty: 2, "amount": 822},
+            {"id":7, "name": "Y", qty: 1, "amount": 981}
+        ],
+        qty: 2,
+        total: 17891
+    }
+
+```
+We will use Action Objects to mutate;
+1) {type: 'ADD_TO_CART', payload: {id: 901, "name": "P", qty: 1, amount: 100}};
+Take previous state and update
+```
+
+```
+    cart: {
+        items: [
+            {"id":4, "name": "A", qty: 2, "amount": 822},
+            {"id":7, "name": "Y", qty: 1, "amount": 981},
+            {id: 901, "name": "P", qty: 1, amount: 100}
+        ],
+        qty: 3,
+        total: 18891
+    }
+
+```
+
+2) Action is increment
+{type:'INCREMENT', payload: 7}
+
+
+```
+    cart: {
+        items: [
+            {"id":4, "name": "A", qty: 2, "amount": 822},
+            {"id":7, "name": "Y", qty: 2, "amount": 1800},
+            {id: 901, "name": "P", qty: 1, amount: 100}
+        ],
+        qty: 3,
+        total: <<>>
+    }
+
+```
