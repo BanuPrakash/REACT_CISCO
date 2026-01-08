@@ -6,11 +6,13 @@ import StateExampleComponent from './hooks/StateExampleComponent'
 import UserDetails from './hooks/UserDetails'
 import Users from './hooks/Users'
 import ParentComponent from './trial/ParentComponent'
+import ReducerHookComponent from './hooks/ReducerHookComponent'
 function App() {
   let [id, setId] = useState(1);
 
   return (
     <div>
+      <ReducerHookComponent />
       <div className='container'>
         <div className='row'>
             <div className='col-md-4'>

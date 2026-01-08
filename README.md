@@ -674,3 +674,6 @@ Take previous state and update
     }
 
 ```
+
+useReducer() hook needs reducer function:
+reducer function takes (state, action) and returns new state
