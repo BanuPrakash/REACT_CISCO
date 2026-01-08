@@ -678,6 +678,56 @@ Take previous state and update
 useReducer() hook needs reducer function:
 reducer function takes (state, action) and returns new state
 
-Break of 20 min [ tea break] -> [11:15 IST]
 
-Build application after the break.
+Build application:
+
+1) NavbarComponent
+2) ProductList
+3) ProductCard
+4) CartList
+5) CartRow
+6) Details
+7) Default
+
+Functionalities in this application:
+1) react-router-dom
+Different URL should render different Component
+http://localhost:3000/products
+http://localhost:3000/cart
+http://localhost:3000/details/3
+http://localhost:3000/aaga
+
+Lazy loading of components
+In Production level code, we should not bundle all components into one.
+That leads to FCP --> if size of bundle.js is more then blank screen appears for longer duration until bundle.js is loaded to client.
+Solution: put only essential components in bundle.js which is commonly required.
+Other components we. can lazily load.
+
+2) Use only functional components with React hooks
+3) Context for state managment
+4) react-bootstrap can also use mui, kendoUI, Adobe React Spectrum,...
+5) bootstrap - CSS Framework
+6) axios instead of fetch for API calls
+7) TypeScript
+
+=====
+```
+npm create vite@latest
+
+◇  Project name:
+│  shopapp
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  TypeScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  Yes
+```
+
+shopapp % npm i bootstrap react-bootstrap react-router-dom axios
