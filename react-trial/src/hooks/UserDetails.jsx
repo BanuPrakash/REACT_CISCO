@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 export default function UserDetails({id}) {
  let [user,setUser] = useState();
+
  // componentDidUpdate, called whenever id changes
   useEffect(() => {
     console.log("called useEffect() of UserDetails")
@@ -14,6 +15,7 @@ export default function UserDetails({id}) {
             setUser(data);
         })
   }, [id]);
+  
   return (
     <div>
         <h1>UserDetails</h1>

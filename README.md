@@ -586,6 +586,9 @@ React Hooks:
 5) useMemo()
 6) useRef()
 7) useCallback()
+
+Not a Hook but a HOC:
+React.memo() for shouldComponentUpdate() alternative
 ...
 
 
@@ -616,5 +619,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 Row contains 12 columns / grids irrespective of view port
 
-<img src="camera.png" className="col-lg-3 col-md-6 col-sm-12" />
+
+
+Closure: Whenver a function returns a function, returned function can access all the members of outer function.
 
