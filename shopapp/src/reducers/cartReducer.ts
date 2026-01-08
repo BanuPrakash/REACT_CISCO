@@ -27,7 +27,8 @@ export default function cartReducer(state: CartState, action:Action) {
                 quantity: state.quantity + 1
             }
         case 'INCREMENT':
-            // TODO
+            // TODO identify product based on payload
+            // increment qty, update amount and total
             return state;
         case 'CLEAR_CART':
             return {

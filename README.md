@@ -748,3 +748,13 @@ CartContext: to Share Cart items to different components
 JSON Server is a lightweight Node.js package that allows developers to create a full fake REST API in less than a minute using a single JSON file as the data source.
 
 shopapp % npx json-server --watch data.json --port 1234
+
+Recap of functionalities used in the application:
+1) React Hooks: useState, useEffect, useReducer, useContext
+2) react-router-dom:
+BrowserRouter, Route, Suspense for Lazy loading, useParams, useNavigate
+3) Context
+4) json-server: to fake RESTful WS
+
+=======================
+
