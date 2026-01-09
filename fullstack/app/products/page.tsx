@@ -5,8 +5,8 @@ import ProductCard from "@/components/ProductCard";
 // SSR 
 export default async function ProductList() {
     // let res = await fetch("https:fakestoreapi.com/products?limit=5");
-    let res = await fetch("http://localhost:3000/api/products");
-    let products:Product[] = await res.json();
+    const res = await fetch("http://localhost:3000/api/products");
+    const products:Product[] = await res.json();
     
     return (
     <div className="row">

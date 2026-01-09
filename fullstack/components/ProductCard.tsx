@@ -1,5 +1,4 @@
 'use client'
-import { useContext } from 'react';
 import type Product from '@/models/Product'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -16,7 +15,7 @@ type Props = {
 // }
 export default function ProductCard({product} : Props) {
 
-  let {id, image,title, price} = product;
+  const {id, image,title, price} = product;
   return (
     <div className='col-md-4 my-2'>
     <Card style={{ width: '18rem' }} >
