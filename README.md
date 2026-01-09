@@ -833,3 +833,29 @@ Try Using Context in Multi-stage Form Submission
     }
 
 ```
+
+https://redux.js.org/ [older version]
+https://redux-toolkit.js.org/ [recommended, latest]
+
+Chrome Web Store: Redux Devtools Extendsion
+
+
+```
+npm create vite@latest
+
+◇  Project name:
+│  redux-basic
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  Yes
+```
+redux-basic %  npm i redux react-redux
