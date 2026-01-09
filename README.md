@@ -880,3 +880,41 @@ npm create vite@latest
 
 redux-toolkit-contactmanager % npm i @reduxjs/toolkit react-redux
 
+Why Immutablity?
+https://immerjs.github.io/immer/
+https://immutable-js.com/
+
+==========================================
+
+Migrating shopapp from Context usage to Redux Toolkit.
+Note: both can co-exist, like prefer Context only for prop-drill and Redux for state managment
+
+=====
+
+```
+npm create vite@latest
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  shopapp-redux
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  TypeScript
+
+shopapp-redux % npm i @reduxjs/toolkit react-redux
+shopapp-redux % npm i bootstrap axios react-bootstrap react-router-dom
+
+Copy code from shopapp to shopapp-redux 
+without Context related data.
+Remove all references of Context in application
+1) NavbarComponent
+2) ProductCard
+3) CartList
+4) CartRow
+```
