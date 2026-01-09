@@ -47,6 +47,7 @@ export default connect(
   mapDispatchToProps
 )(App);
 
+
 function ContactView({contacts, removeEvt}) {
   return (
     contacts.map(contact => <div key={contact.email}>

@@ -859,3 +859,24 @@ npm create vite@latest
 │  Yes
 ```
 redux-basic %  npm i redux react-redux
+
+```
+npm create vite@latest
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  redux-toolkit-contactmanager
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+
+```
+
+redux-toolkit-contactmanager % npm i @reduxjs/toolkit react-redux
+
