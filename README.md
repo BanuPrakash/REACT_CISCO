@@ -918,3 +918,35 @@ Remove all references of Context in application
 3) CartList
 4) CartRow
 ```
+
+Full Stack Application development.
+
+npm run build
+creates "dist" folder.
+Take this "dist" folder:
+1) Full stack JS application
+http://localhost:8080
+Frontend React - Backend ExpressJS with Sequeslize to connect to RDBMS/ MongoDB
+Frontend React -- backend Spring Boot / Java - JPA --- RDBMS
+
+2) NextJS/ Remix: total solution for Full Stack React application.
+We can use React in frontend and in Backend
+
+====
+npm create next-app@latest
+
+NextJs uses file based routing
+
+npm i axios bootstrap react-bootstrap
+
+"app" folder for Page based routing
+app/page.tsx --> landing route http://localhost:3000
+
+NextJS supports CSR and SSR, default it considers all components to be server side rendenred until you add 'use client'
+Any Event handling, hooks usage will be for client side rendering
+
+Generally "components" folder for client-side rendering components
+"app" folder for SSR components
+
+
+"pages" folder is for building RESTful Endpoints like interacting with database and serving JSON/XML data
